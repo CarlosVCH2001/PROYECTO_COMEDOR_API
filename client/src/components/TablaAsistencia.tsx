@@ -9,9 +9,26 @@ import {
   
   export default function TablaAsistencia() {
     const datos = [
-      { dni: "12345678", nombre: "Juan Pérez", faltas: "3" },
-      { dni: "23456789", nombre: "María García", faltas: "2" },
-      // ... otros datos
+        { dni: "12345678", nombre: "Juan Pérez", faltas: "3" },
+        { dni: "23456789", nombre: "María García", faltas: "2" },
+        { dni: "34567890", nombre: "Luis Rodríguez", faltas: "4" },
+        { dni: "45678901", nombre: "Ana Martínez", faltas: "1" },
+        { dni: "56789012", nombre: "Carlos Sánchez", faltas: "5" },
+        { dni: "67890123", nombre: "Lucía Torres", faltas: "2" },
+        { dni: "78901234", nombre: "Jorge Ramírez", faltas: "3" },
+        { dni: "89012345", nombre: "Valeria Ríos", faltas: "1" },
+        { dni: "90123456", nombre: "Diego Castro", faltas: "4" },
+        { dni: "01234567", nombre: "Paula Mendoza", faltas: "2" },
+        { dni: "11223344", nombre: "Ricardo Gómez", faltas: "3" },
+        { dni: "22334455", nombre: "Camila Herrera", faltas: "2" },
+        { dni: "33445566", nombre: "Andrés Ruiz", faltas: "5" },
+        { dni: "44556677", nombre: "Natalia Díaz", faltas: "3" },
+        { dni: "55667788", nombre: "Manuel Flores", faltas: "1" },
+        { dni: "66778899", nombre: "Lorena Chávez", faltas: "4" },
+        { dni: "77889900", nombre: "Francisco León", faltas: "2" },
+        { dni: "88990011", nombre: "Elena Morales", faltas: "3" },
+        { dni: "99001122", nombre: "Santiago Bravo", faltas: "1" },
+        { dni: "10111213", nombre: "Gabriela Paredes", faltas: "4" },
     ];
   
     return (
