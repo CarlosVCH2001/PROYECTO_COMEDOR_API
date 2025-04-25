@@ -190,8 +190,8 @@ export default function Reportes() {
           {/* Resumen */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <CardResumen titulo="Total Comensales" valor="1,248" />
-            <CardResumen titulo="Asistencias Hoy" valor="852" />
-            <CardResumen titulo="Ausencias Hoy" valor="396" />
+            <CardResumen titulo="Asistencias" valor="852" />
+            <CardResumen titulo="Ausencias" valor="396" />
           </div>
 
           {/* Gráficas */}
