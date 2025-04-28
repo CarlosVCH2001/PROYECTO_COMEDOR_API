@@ -20,7 +20,13 @@ function ScrollArea({
       >
         {children}
       </ScrollAreaPrimitive.Viewport>
-      <ScrollBar />
+
+      {/* Barra de scroll vertical */}
+      <ScrollBar orientation="vertical" />
+
+      {/* Barra de scroll horizontal */}
+      <ScrollBar orientation="horizontal" />
+
       <ScrollAreaPrimitive.Corner />
     </ScrollAreaPrimitive.Root>
   )

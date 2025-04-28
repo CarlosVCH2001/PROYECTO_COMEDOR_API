@@ -34,7 +34,7 @@ export default function Reportes() {
             <CardTitle>Lista de Faltas</CardTitle>
           </CardHeader>
           <CardContent>
-            <ScrollArea className="h-[300px] w-full rounded-md border p-2">
+            <ScrollArea className="h-[300px] w-full rounded-md border p-2 overflow-auto">
               <TablaAsistencia />
             </ScrollArea>
           </CardContent>

@@ -1,9 +1,25 @@
+import { useRef } from "react";
 import CardInicio from "@/components/CardInicio";
 import { UploadCloud, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
   const navigate = useNavigate();
+  const fileInputRef = useRef<HTMLInputElement>(null); // referencia al input file
+
+  const handleFileUploadClick = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click(); // simula el clic en el input escondido
+    }
+  };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      console.log("Archivo seleccionado:", file.name);
+      // Aquí podrías hacer algo como subirlo al servidor
+    }
+  };
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Encabezado */}
@@ -14,6 +30,14 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Input oculto */}
+      <input
+        type="file"
+        accept=".xlsx,.xls"
+        ref={fileInputRef}
+        className="hidden"
+        onChange={handleFileChange}
+      />
       {/* Tarjetas */}
       <div className="flex justify-center mt-10">
         <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl px-4">
@@ -22,7 +46,7 @@ export default function HomePage() {
             titulo="Subir Reporte de Asistencia"
             descripcion="Sube el archivo Excel generado por el lector biométrico y guarda los registros en la base de datos."
             botonTexto="Subir Archivo"
-            onClick={() => navigate("/subir-archivo")}
+            onClick={handleFileUploadClick}
           />
           <CardInicio
             icon={Users}

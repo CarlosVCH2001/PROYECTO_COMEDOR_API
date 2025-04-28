@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./app/layout";
 import HomePage from "./pages/HomePage";
 import ReportesGeneral from "./pages/ReportesGeneral";
+import TablaComensales from "./components/TablaComensales";
 import { JSX } from "react/jsx-runtime";
 function App(): JSX.Element {
   return (
@@ -12,6 +13,14 @@ function App(): JSX.Element {
           element={
             <Layout>
               <HomePage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/comensales"
+          element={
+            <Layout>
+              <TablaComensales />
             </Layout>
           }
         />
