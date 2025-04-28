@@ -5,8 +5,8 @@ export default function GraficoRadial() {
     chart: { type: "radialBar" as const, foreColor: "#14b8a6" },
     plotOptions: {
       radialBar: {
-        hollow: { size: "60%" },
-        dataLabels: { value: { fontSize: "22px" } },
+        hollow: { size: "60%" }, // achicado
+        dataLabels: { value: { fontSize: "18px" } }, // número más pequeño
       },
     },
     labels: ["Asistencia"],
@@ -15,5 +15,5 @@ export default function GraficoRadial() {
 
   const series = [75];
 
-  return <Chart options={options} series={series} type="radialBar" height={300} />;
+  return <Chart options={options} series={series} type="radialBar" height={150} />; // altura más baja
 }

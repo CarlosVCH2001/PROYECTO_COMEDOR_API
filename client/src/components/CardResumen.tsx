@@ -1,12 +1,24 @@
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import { ReactNode } from "react";
+import { Card } from "@/components/ui/card";
 
-export default function CardResumen({ titulo, valor }: { titulo: string; valor: string }) {
+interface CardResumenProps {
+  titulo: string;
+  valor: string;
+  icono: ReactNode; // nuevo prop para el icono
+}
+
+export default function CardResumen({ titulo, valor, icono }: CardResumenProps) {
   return (
-    <Card className="bg-white text-black border-teal-500 border-3 shadow-[0_0_6px_#0f766e]">
-      <CardHeader>
-        <CardTitle className="text-lg">{titulo}</CardTitle>
-      </CardHeader>
-      <CardContent className="text-2xl font-bold text-teal-900">{valor}</CardContent>
+    <Card className="bg-white text-black h-48 border-teal-500 border-3 shadow-[0_0_6px_#0f766e] flex flex-col items-center justify-center space-y-2">
+      <div>
+        {icono}
+      </div>
+      <div className="text-3xl font-bold text-teal-900">
+        {valor}
+      </div>
+      <div className="text-sm font-medium text-gray-500">
+        {titulo}
+      </div>
     </Card>
   );
 }
