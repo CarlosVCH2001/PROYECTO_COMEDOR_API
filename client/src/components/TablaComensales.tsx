@@ -20,6 +20,7 @@ import {
         ingreso: 2021,
         sisfoh: "Sí",
         carrera: "Ingeniería de Sistemas",
+        celular: "950806208"
       },
     ];
   
@@ -39,6 +40,7 @@ import {
                 "Ingreso",
                 "SISFOH",
                 "Carrera",
+                "Celular",
             ].map((col) => (
                 <TableHead key={col} className="px-4 py-2 text-left font-semibold">
                 {col}
@@ -60,6 +62,7 @@ import {
                 <TableCell className="px-4 py-2">{item.ingreso}</TableCell>
                 <TableCell className="px-4 py-2">{item.sisfoh}</TableCell>
                 <TableCell className="px-4 py-2">{item.carrera}</TableCell>
+                <TableCell className="px-4 py-2">{item.celular}</TableCell>
             </TableRow>
             ))}
         </TableBody>
