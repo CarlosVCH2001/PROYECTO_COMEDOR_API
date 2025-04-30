@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import CardResumen from "@/components/CardResumen";
 import GraficoLineas from "@/components/GraficoLineas";
-import TablaAsistencia from "@/components/TablaAsistencia";
+import TablaAsistencia from "@/components/TablaAsisAlternativo";
 import { Users, CheckCircle, XCircle } from "lucide-react";
 import GraficoSemicircular from "@/components/GraficoSemicircular";
 import FiltrosDashboard from "@/components/FiltradoDashboard";
