@@ -6,15 +6,17 @@ import GraficoLineas from "@/components/GraficoLineas";
 import TablaAsistencia from "@/components/TablaAsistencia";
 import { Users, CheckCircle, XCircle } from "lucide-react";
 import GraficoSemicircular from "@/components/GraficoSemicircular";
+import FiltrosDashboard from "@/components/FiltradoDashboard";
 
 export default function Reportes() {
   return (
     <div className="flex flex-col p-4 space-y-4 bg-gray-100 text-white">
+      <FiltrosDashboard />
       <div className="flex-1 basis-1/3 grid grid-cols-2 md:grid-cols-4 gap-4">
         <CardResumen titulo="Total Comensales" valor="1,000" icono={<Users className="text-blue-500"/>}/>
         <CardResumen titulo="Asistencias" valor="750" icono={<CheckCircle className="text-green-500"/>}/>
         <CardResumen titulo="Ausencias" valor="250" icono={<XCircle className="text-red-500"/>}/>
-        <Card className="h-40 p-0 bg-white text-black border-teal-500 border-3 shadow-[0_0_6px_#0f766e]">
+        <Card className="h-38 p-0 bg-white text-black border-teal-500 border-3 shadow-[0_0_6px_#0f766e]">
           <CardContent>
             <GraficoSemicircular asistencia={75} inasistencia={25}/>
           </CardContent>

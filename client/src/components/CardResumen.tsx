@@ -9,7 +9,7 @@ interface CardResumenProps {
 
 export default function CardResumen({ titulo, valor, icono }: CardResumenProps) {
   return (
-    <Card className="flex items-center gap-3 bg-white text-black h-40 border-teal-500 border-3 shadow-[0_0_6px_#0f766e]">
+    <Card className="flex items-center gap-3 bg-white text-black h-38 border-teal-500 border-3 shadow-[0_0_6px_#0f766e]">
       <div>
         {icono}
       </div>
